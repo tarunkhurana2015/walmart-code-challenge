@@ -67,7 +67,7 @@ class CountryCellTableViewCell: UITableViewCell {
         self.countryCapital.text = country.capital
         
         Task {
-            let (data, _) = try await URLSession.shared.data(from: URL(string: "https://static.magflags.net/media/catalog/product/cache/75170699113cf9b1963820a3ea1bab40/T/H/TH-94.png")!)
+            let (data, _) = try await URLSession.shared.data(from: URL(string: country.flag)!)
             await MainActor.run {
                 self.countryFlag.image = UIImage(data: data)
             }
@@ -97,7 +97,7 @@ class CountryCellTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
                         
-            countryFlag.widthAnchor.constraint(equalToConstant: 75),
+            countryFlag.widthAnchor.constraint(equalToConstant: 0),
             countryFlag.heightAnchor.constraint(equalToConstant: 50),
             countryFlag.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor),
             countryFlag.centerYAnchor.constraint(equalTo: self.centerYAnchor),

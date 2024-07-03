@@ -23,9 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
+        // UIKit
         window.rootViewController = UINavigationController(rootViewController: CountryViewController(viewModel: CountryViewModel()))
-        
-        let contentView = UIHostingController(rootView: CountryView(viewModel: CountryViewModel()))
+        // SwiftUI
+        //let contentView = UIHostingController(rootView: CountryView(viewModel: CountryViewModel()))
         //window.rootViewController = contentView
         
         self.window = window
