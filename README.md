@@ -17,6 +17,15 @@
 
 ## Solution 
 
+The solution was build for both the `UIKit` and `SwiftUI`
+```swift
+// UIKit
+window.rootViewController = UINavigationController(rootViewController: CountryViewController(viewModel: CountryViewModel()))
+// SwiftUI
+//let contentView = UIHostingController(rootView: CountryView(viewModel: CountryViewModel()))
+//window.rootViewController = contentView
+```
+
 ## Package `Country` - `Clean Architecture` with `MVVM` and `UIKit`
 
 Clean architecture pattern emphasizes the sepration of concertns between different layers to create an application structure that is isolated, testable and easy to maintain.
