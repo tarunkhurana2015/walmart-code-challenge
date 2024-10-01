@@ -23,3 +23,5 @@ jobs:
         run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
       - name: show current version of Xcode
         run: xcodebuild -version
+      - name: Run Tests
+        run: ./CountryApp/run_tests.sh
