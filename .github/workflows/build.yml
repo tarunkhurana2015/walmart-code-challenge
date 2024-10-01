@@ -1,0 +1,7 @@
+name: Build #name
+on: # directive
+  workflow_dispatch: # Trigger - allows to run the workflow manually from github
+  push: # Trigger - push
+    branches: [main]
+  pull_request: # Trigger - PR
+    branches: [main]
