@@ -24,4 +24,4 @@ jobs:
       - name: show current version of Xcode
         run: xcodebuild -version
       - name: Run Tests
-        run: ./CountryApp/run_tests.sh
+        run: ./run_tests.sh
