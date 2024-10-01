@@ -25,5 +25,7 @@ jobs:
         run: xcodebuild -version
       - name: Show SDKs
         run: xcodebuild -showsdks
+      - name: Simulators available
+        run: xcrun simctl list
       - name: Run Tests
         run: ./run_tests.sh
